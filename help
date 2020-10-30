@@ -1,0 +1,93 @@
+package ch04lab2b;
+
+/**
+ * another relatively simple Train class
+ * https://docs.google.com/document/d/1xkB7RxuLBcCfZ-dr-fD4JzG6X8WzfknWrea8uafBSBE
+ * 2020-06-02
+ * @author John Maxfield
+ */
+public class Train {
+   private String trainName;      // name of the train, e.g. "City of New Orleans"
+   private int    engineCount;    // how many engines pulling
+   private int    carCount;       // how many non-engine cars in the train
+
+   /**
+    * calls the other constructor to set values to empty string, 0
+    */
+   public Train() {
+      this("", 0, 0);
+   }
+
+   /**
+    * create a Train object with given data
+    * @param trainName name of the train
+    * @param engineCount number of engines pulling train
+    * @param carCount number of cars in train
+    */
+   public Train(String trainName, int engineCount, int carCount) {
+      this.setTrainName(trainName);
+      this.setEngineCount(engineCount);
+      this.setCarCount(carCount);
+   }
+
+   /**
+    * get the name of the train
+    * @return the name of the train
+    */
+   public String getTrainName() {
+      return this.trainName;
+   }
+
+   /**
+    * set the name of the train
+    * @param trainName name of the train
+    */
+   public void setTrainName(String trainName) {
+      this.trainName = trainName;
+   }
+
+   /**
+    * get the number of engines in train
+    * @return the number of engines in train
+    */
+   public int getEngineCount() {
+      return this.engineCount;
+   }
+
+   /**
+    * set the number of engines in train
+    * @param engineCount the number of engines in train
+    */
+   public void setEngineCount(int engineCount) {
+      this.engineCount = engineCount;
+   }
+
+   /**
+    * get the number of cars in the train
+    * @return the number of cars in the train
+    */
+   public int getCarCount() {
+      return this.carCount;
+   }
+
+   /**
+    * set the number of cars in the train
+    * @param carCount the number of cars in the train
+    */
+   public void setCarCount(int carCount) {
+      this.carCount = carCount;
+   }
+
+   /**
+    * combine all of the relevant train info
+    * @return a String representation of the train
+    */
+   @Override
+   public String toString() {
+      return "Train{" +
+          "trainName='" + this.trainName + '\'' +
+          ", engineCount=" + this.engineCount +
+          ", carCount=" + this.carCount +
+          '}';
+   }
+}
